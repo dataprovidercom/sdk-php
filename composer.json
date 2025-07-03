@@ -1,0 +1,23 @@
+{
+    "name": "dataprovider/sdk",
+    "description": "SDK for https://api.dataprovider.com",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Dataprovider\\SDK\\": "src/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "8.3"
+        }
+    },
+    "require": {
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.2"
+    }
+}
