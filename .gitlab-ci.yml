@@ -1,0 +1,19 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  image: composer:2.8.9
+  script:
+    - composer install --ignore-platform-reqs
+  artifacts:
+    paths:
+      - vendor
+
+test:
+  stage: test
+  image: php:8.3-cli
+  script:
+    - vendor/bin/phpunit --bootstrap vendor/autoload.php tests/
